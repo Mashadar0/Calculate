@@ -31,7 +31,7 @@ public class MathTest {
     }
     @Test(dataProvider = "testEqualsNotSum", expectedExceptions = {ClassCastException.class, NullPointerException.class, AssertionError.class})
     public void testNotSum(Object a, Object b, Object c) {
-        Assert.assertEquals(a, new MyMath().sumTest(b, c), "Значения равны!");
+        Assert.assertEquals(a, new MyMath().sumTest(b, c), "Значения не равны!");
     }
 
     @DataProvider
@@ -60,7 +60,7 @@ public class MathTest {
     }
     @Test(dataProvider = "testEqualsNotSubtr", expectedExceptions = {ClassCastException.class, NullPointerException.class, AssertionError.class})
     public void testNotSubtr(Object a, Object b, Object c) {
-        Assert.assertEquals(a, new MyMath().subtrTest(b, c), "Значения равны!");
+        Assert.assertEquals(a, new MyMath().subtrTest(b, c), "Значения не равны!");
     }
 
     @DataProvider
@@ -89,7 +89,7 @@ public class MathTest {
     }
     @Test(dataProvider = "testEqualsNotMultipli", expectedExceptions = {ClassCastException.class, NullPointerException.class, AssertionError.class})
     public void testNotMultipli(Object a, Object b, Object c) {
-        Assert.assertEquals(a, new MyMath().multipliTest(b, c), "Значения равны!");
+        Assert.assertEquals(a, new MyMath().multipliTest(b, c), "Значения не равны!");
     }
 
     @DataProvider
@@ -118,6 +118,6 @@ public class MathTest {
     }
     @Test(dataProvider = "testEqualsNotDivis", expectedExceptions = {ClassCastException.class, NullPointerException.class, AssertionError.class})
     public void testNotDivis(Object a, Object b, Object c) {
-        Assert.assertEquals(a, new MyMath().divisTest(b, c), "Значения равны!");
+        Assert.assertEquals(a, new MyMath().divisTest(b, c), "Значения не равны!");
     }
 }
