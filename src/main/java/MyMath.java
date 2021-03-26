@@ -46,21 +46,53 @@ public class MyMath {
 
     public static Object sumTest(Object b, Object c) {
         System.out.println("Складываем "+ b + " и " + c);
+        try {
         return (Integer)b + (Integer)c;
+        } catch (ClassCastException e){
+            System.out.println("Требуется ввод целых чисел");
+            return e;
+        } catch (NullPointerException e){
+            System.out.println("Отсутствует число");
+            return e;
+        }
     }
 
     public static Object subtrTest(Object b, Object c) {
         System.out.println("Вычитаем "+ b + " и " + c);
-        return (Integer)b - (Integer)c;
+        try {
+            return (Integer)b - (Integer)c;
+        } catch (ClassCastException e){
+            System.out.println("Требуется ввод целых чисел");
+            return e;
+        } catch (NullPointerException e){
+            System.out.println("Отсутствует число");
+            return e;
+        }
     }
 
     public static Object multipliTest(Object b, Object c) {
         System.out.println("Умножаем "+ b + " и " + c);
-        return (Integer)b * (Integer)c;
+        try {
+            return (Integer)b * (Integer)c;
+        } catch (ClassCastException e){
+            System.out.println("Требуется ввод целых чисел");
+            return e;
+        } catch (NullPointerException e){
+            System.out.println("Отсутствует число");
+            return e;
+        }
     }
 
     public static Object divisTest(Object b, Object c) {
         System.out.println("Делим "+ b + " и " + c);
-        return (Integer)b / (Integer)c;
+        try {
+            return (Integer)b / (Integer)c;
+        } catch (ClassCastException e){
+            System.out.println("Требуется ввод целых чисел");
+            return e;
+        } catch (NullPointerException e){
+            System.out.println("Отсутствует число");
+            return e;
+        }
     }
 }
